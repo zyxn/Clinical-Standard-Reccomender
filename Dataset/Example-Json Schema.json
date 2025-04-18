@@ -1,0 +1,121 @@
+{
+  "disease_name": "Skabies",
+  "icd10": "B86",
+  "icpc2": "S72",
+  "capability_level": "4A",
+  "description": "Skabies adalah penyakit yang disebabkan infestasi dan sensitisasi kulit oleh tungau Sarcoptes scabiei dan produknya. Penyakit ini berhubungan erat dengan higiene yang buruk.",
+  "symptoms": [
+    {
+      "id": "S1",
+      "description": "Pruritus nokturna, yaitu gatal yang hebat terutama pada malam hari atau saat penderita berkeringat.",
+      "location": "Kulit",
+      "time_pattern": "Nokturna"
+    }
+  ],
+  "risk_factors": [
+    {
+      "id": "RF1",
+      "description": "Masyarakat yang hidup dalam kelompok yang padat seperti tinggal di asrama atau pesantren.",
+      "category": "Sosial"
+    },
+    {
+      "id": "RF2",
+      "description": "Higiene yang buruk.",
+      "category": "Perilaku"
+    },
+    {
+      "id": "RF3",
+      "description": "Sosial ekonomi rendah seperti di panti asuhan, dan sebagainya.",
+      "category": "Sosial"
+    },
+    {
+      "id": "RF4",
+      "description": "Hubungan seksual yang sifatnya promiskuitas.",
+      "category": "Perilaku"
+    }
+  ],
+  "physical_exams": [
+    {
+      "id": "PE1",
+      "finding": "Lesi kulit berupa terowongan (kanalikuli) berwarna putih atau abu- abu dengan panjang rata-rata 1 cm. Ujung terowongan terdapat papul, vesikel, dan bila terjadi infeksi sekunder, maka akan terbentuk pustul, ekskoriasi, dan sebagainya.",
+      "location": "Kulit"
+    }
+  ],
+  "lab_tests": [
+    {
+      "id": "LT1",
+      "name": "Pemeriksaan mikroskopis dari kerokan kulit",
+      "specimen": "Kerokan kulit",
+      "result_expected": "Menemukan tungau"
+    }
+  ],
+  "diagnosis": {
+    "id": "D1",
+    "type": "Klinis",
+    "criteria": "Diagnosis ditegakkan berdasarkan anamnesis dan pemeriksaan fisik. Terdapat 4 tanda kardinal untuk diagnosis skabies, yaitu: Pruritus nokturna, Penyakit menyerang manusia secara berkelompok, Adanya terowongan (kunikulus) pada tempat-tempat predileksi yang berwarna putih atau keabu-abuan, berbentuk garis lurus atau berkelok-kelok, rata-rata panjang 1 cm, pada ujung terowongan ditemukan papul atau vesikel, Ditemukannya tungau dengan pemeriksaan mikroskopis."
+  },
+  "diagnosis_bandings": [
+    {
+      "id": "DB1",
+      "name": "Pioderma",
+      "notes": null
+    },
+    {
+      "id": "DB2",
+      "name": "Impetigo",
+      "notes": null
+    },
+    {
+      "id": "DB3",
+      "name": "Dermatitis",
+      "notes": null
+    },
+    {
+      "id": "DB4",
+      "name": "Pedikulosis korporis",
+      "notes": null
+    }
+  ],
+  "complications": [
+    {
+      "id": "C1",
+      "name": "Infeksi kulit sekunder",
+      "cause": "S. aureus",
+      "population": null
+    }
+  ],
+  "treatments": [
+    {
+      "id": "T1",
+      "type": "Perbaikan higiene diri dan lingkungan",
+      "description": "Tidak menggunakan peralatan pribadi secara bersama-sama dan alas tidur diganti bila ternyata pernah digunakan oleh penderita skabies. Menghindari kontak langsung dengan penderita skabies.",
+      "route": null,
+      "dosage": null,
+      "medications": []
+    }
+  ],
+  "counselings": [
+    {
+      "id": "C1",
+      "point": "Minum obat secara teratur.",
+      "target": "Keluarga"
+    },
+    {
+      "id": "C2",
+      "point": "Menjaga kebersihan lingkungan tempat tinggal, memakai baju berlengan panjang dan celana panjang, pada beberapa kasus boleh memakai mosquito repellent jika diperlukan, dan lain-lain agar terhindar dari gigitan serangga.",
+      "target": "Keluarga"
+    }
+  ],
+  "referral_criteria": [
+    {
+      "id": "RC1",
+      "condition": "Jika kondisi memburuk, yaitu dengan makin bertambahnya patch eritema, timbul bula, atau disertai gejala sistemik atau komplikasi.",
+      "type": null
+    }
+  ],
+  "equipment": [],
+  "prognosis": {
+    "category": "Bonam",
+    "context": "Umumnya bonam. Quo ad sanationam untuk reaksi tipe cepat dan reaksi tidak biasa adalah dubia ad malam, sedangkan reaksi tipe lambat adalah bonam."
+  }
+}

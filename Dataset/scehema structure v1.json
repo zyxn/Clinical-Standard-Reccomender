@@ -1,0 +1,189 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DiseaseSchema",
+  "type": "object",
+  "properties": {
+    "disease_name": {
+      "type": "string",
+      "description": "Nama penyakit sesuai PPK IDI"
+    },
+    "icd10": { "type": "string", "description": "Kode ICD-10 dari penyakit" },
+    "icpc2": { "type": "string", "description": "Kode ICPC-2 dari penyakit" },
+    "capability_level": {
+      "type": "string",
+      "description": "Tingkat kemampuan dokter (misal: 4A, 3B)"
+    },
+    "description": {
+      "type": ["string", "null"],
+      "description": "Penjelasan umum tentang penyakit ini"
+    },
+
+    "symptoms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "description": { "type": "string" },
+          "location": { "type": ["string", "null"] },
+          "time_pattern": { "type": ["string", "null"] }
+        },
+        "required": ["description"]
+      }
+    },
+
+    "risk_factors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "description": { "type": "string" },
+          "category": { "type": ["string", "null"] }
+        },
+        "required": ["description"]
+      }
+    },
+
+    "physical_exams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "finding": { "type": "string" },
+          "location": { "type": ["string", "null"] }
+        },
+        "required": ["finding"]
+      }
+    },
+
+    "lab_tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "specimen": { "type": ["string", "null"] },
+          "result_expected": { "type": ["string", "null"] }
+        },
+        "required": ["name"]
+      }
+    },
+
+    "diagnosis": {
+      "type": ["object", "null"],
+      "properties": {
+        "type": { "type": "string" },
+        "criteria": { "type": ["string", "null"] }
+      },
+      "required": ["type"]
+    },
+
+    "diagnosis_bandings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "notes": { "type": ["string", "null"] }
+        },
+        "required": ["name"]
+      }
+    },
+
+    "complications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "cause": { "type": ["string", "null"] },
+          "population": { "type": ["string", "null"] }
+        },
+        "required": ["name"]
+      }
+    },
+
+    "treatments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "type": "string" },
+          "description": { "type": ["string", "null"] },
+          "route": { "type": ["string", "null"] },
+          "dosage": { "type": ["string", "null"] },
+          "medications": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" },
+                "dose": { "type": ["string", "null"] },
+                "duration": { "type": ["string", "null"] },
+                "route": { "type": ["string", "null"] }
+              },
+              "required": ["name"]
+            }
+          }
+        },
+        "required": ["type"]
+      }
+    },
+
+    "counselings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "point": { "type": "string" },
+          "target": { "type": ["string", "null"] }
+        },
+        "required": ["point"]
+      }
+    },
+
+    "referral_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "condition": { "type": "string" },
+          "type": { "type": ["string", "null"] }
+        },
+        "required": ["condition"]
+      }
+    },
+
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "purpose": { "type": ["string", "null"] }
+        },
+        "required": ["name"]
+      }
+    },
+
+    "prognosis": {
+      "type": ["object", "null"],
+      "properties": {
+        "category": { "type": "string" },
+        "context": { "type": ["string", "null"] }
+      },
+      "required": ["category"]
+    }
+  },
+  "required": ["disease_name", "icd10", "icpc2", "capability_level"]
+}
